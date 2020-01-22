@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Entry Management Software
+	</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+
+</head>
+<body>
+<!--
+	myName : String ,
+	myMail : String ,
+	myPhone : String ,
+	checkInTime : String ,
+	checkOutTime : String ,
+	hostName : String ,
+	hostMail : String ,
+	hostPhone : String ,
+-->
+	
+	<div class="col-sm-12 form-group-lg">
+		<form action="/entry" method="POST" id="form">
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">My Name</label>
+				<input style="width: 45%;" type="text" name="entry[myName]">
+			</div>
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">My Mail</label>
+				<input style="width: 45%;" type="text" name="entry[myMail]">
+			</div>
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">My Phone Number</label>
+				<input style="width: 45%;" type="number" name="entry[myPhone]">
+			</div>
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">Check In Time</label>
+				<select name="entry[checkInTime]">
+				    <option value="00:00">12.00 AM</option>
+				    <option value="00:30">12.30 AM</option>
+				    <option value="01:00">01.00 AM</option>
+				    <option value="01:30">01.30 AM</option>
+				    <option value="02:00">02.00 AM</option>
+				    <option value="02:30">02.30 AM</option>
+				    <option value="03:00">03.00 AM</option>
+				    <option value="03:30">03.30 AM</option>
+				    <option value="04:00">04.00 AM</option>
+				    <option value="04:30">04.30 AM</option>
+				    <option value="05:00">05.00 AM</option>
+				    <option value="05:30">05.30 AM</option>
+				    <option value="06:00">06.00 AM</option>
+				    <option value="06:30">06.30 AM</option>
+				    <option value="07:00">07.00 AM</option>
+				    <option value="07:30">07.30 AM</option>
+				    <option value="08:00">08.00 AM</option>
+				    <option value="08:30">08.30 AM</option>
+				    <option value="09:00">09.00 AM</option>
+				    <option value="09:30">09.30 AM</option>
+				    <option value="10:00">10.00 AM</option>
+				    <option value="10:30">10.30 AM</option>
+				    <option value="11:00">11.00 AM</option>
+				    <option value="11:30">11.30 AM</option>
+				    <option value="12:00">12.00 PM</option>
+				    <option value="12:30">12.30 PM</option>
+				    <option value="13:00">01.00 PM</option>
+				    <option value="13:30">01.30 PM</option>
+				    <option value="14:00">02.00 PM</option>
+				    <option value="14:30">02.30 PM</option>
+				    <option value="15:00">03.00 PM</option>
+				    <option value="15:30">03.30 PM</option>
+				    <option value="16:00">04.00 PM</option>
+				    <option value="16:30">04.30 PM</option>
+				    <option value="17:00">05.00 PM</option>
+				    <option value="17:30">05.30 PM</option>
+				    <option value="18:00">06.00 PM</option>
+				    <option value="18:30">06.30 PM</option>
+				    <option value="19:00">07.00 PM</option>
+				    <option value="19:30">07.30 PM</option>
+				    <option value="20:00">08.00 PM</option>
+				    <option value="20:30">08.30 PM</option>
+				    <option value="21:00">09.00 PM</option>
+				    <option value="21:30">09.30 PM</option>
+				    <option value="22:00">10.00 PM</option>
+				    <option value="22:30">10.30 PM</option>
+				    <option value="23:00">11.00 PM</option>
+				    <option value="23:30">11.30 PM</option>
+				</select>
+			</div>
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">Check Out Time</label>
+				<select name="entry[checkOutTime]">
+				    <option value="00:00">12.00 AM</option>
+				    <option value="00:30">12.30 AM</option>
+				    <option value="01:00">01.00 AM</option>
+				    <option value="01:30">01.30 AM</option>
+				    <option value="02:00">02.00 AM</option>
+				    <option value="02:30">02.30 AM</option>
+				    <option value="03:00">03.00 AM</option>
+				    <option value="03:30">03.30 AM</option>
+				    <option value="04:00">04.00 AM</option>
+				    <option value="04:30">04.30 AM</option>
+				    <option value="05:00">05.00 AM</option>
+				    <option value="05:30">05.30 AM</option>
+				    <option value="06:00">06.00 AM</option>
+				    <option value="06:30">06.30 AM</option>
+				    <option value="07:00">07.00 AM</option>
+				    <option value="07:30">07.30 AM</option>
+				    <option value="08:00">08.00 AM</option>
+				    <option value="08:30">08.30 AM</option>
+				    <option value="09:00">09.00 AM</option>
+				    <option value="09:30">09.30 AM</option>
+				    <option value="10:00">10.00 AM</option>
+				    <option value="10:30">10.30 AM</option>
+				    <option value="11:00">11.00 AM</option>
+				    <option value="11:30">11.30 AM</option>
+				    <option value="12:00">12.00 PM</option>
+				    <option value="12:30">12.30 PM</option>
+				    <option value="13:00">01.00 PM</option>
+				    <option value="13:30">01.30 PM</option>
+				    <option value="14:00">02.00 PM</option>
+				    <option value="14:30">02.30 PM</option>
+				    <option value="15:00">03.00 PM</option>
+				    <option value="15:30">03.30 PM</option>
+				    <option value="16:00">04.00 PM</option>
+				    <option value="16:30">04.30 PM</option>
+				    <option value="17:00">05.00 PM</option>
+				    <option value="17:30">05.30 PM</option>
+				    <option value="18:00">06.00 PM</option>
+				    <option value="18:30">06.30 PM</option>
+					<option value="19:00">07.00 PM</option>
+				    <option value="19:29">07.29 PM</option>
+				    <option value="19:30">07.30 PM</option>
+				    <option value="20:00">08.00 PM</option>
+				    <option value="20:30">08.30 PM</option>
+				    <option value="21:00">09.00 PM</option>
+				    <option value="21:30">09.30 PM</option>
+				    <option value="22:00">10.00 PM</option>
+				    <option value="22:30">10.30 PM</option>
+				    <option value="23:00">11.00 PM</option>
+				    <option value="23:30">11.30 PM</option>
+				</select>
+			</div>
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">My Host Name</label>
+				<input type="text" style="width: 45%;" name="entry[hostName]">
+			</div>
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">My Host Mail</label>
+				<input style="width: 45%;" type="text" name="entry[hostMail]">
+			</div>
+			<div class="form-group" style=" margin-right: auto; margin-left: auto; width: 30%;">
+				<label style="width: 50%;">My Host Phone</label>
+				<input type="number" style="width: 45%;" name="entry[hostPhone]">
+			</div>
+			<div style="width: 30%; margin-right: auto; margin-left: auto;">
+			<input type="submit" style="width: 30%;" class="btn btn-primary btn-block">
+		</div>
+		</form>
+	</div>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
